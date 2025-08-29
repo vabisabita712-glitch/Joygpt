@@ -4,10 +4,9 @@
   bottom: 20px;
   left: 20px;
   transform: translateY(150%); /* Start hidden below screen */
-  background-color: #2d3748; /* A dark slate gray */
-  color: white;
+  background-color: #d1fae5; /* A light green */
+  color: #1f2937; /* A dark gray for text */
   padding: 16px 24px;
-  border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
@@ -29,7 +28,7 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #4a5568; /* A lighter slate gray */
+  border: 2px solid #6ee7b7; /* A medium green */
 }
 
 .purchase-notification .content p {
@@ -40,13 +39,13 @@
 
 .purchase-notification .content p strong {
   font-weight: 600;
-  color: #a0aec0; /* A light gray for emphasis */
+  color: #10b981; /* A strong green for emphasis */
 }
 
 .purchase-notification .close-btn {
   background: none;
   border: none;
-  color: #cbd5e0; /* A lighter gray for the close icon */
+  color: #374151; /* A medium gray for the close icon */
   font-size: 24px;
   cursor: pointer;
   padding: 0;
@@ -54,5 +53,5 @@
 }
 
 .purchase-notification .close-btn:hover {
-  color: white;
+  color: #111827; /* A darker gray on hover */
 }
