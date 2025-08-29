@@ -1,0 +1,13 @@
+# This is a sample .htaccess file.
+# Please be aware that Netlify does not use this file for configuration.
+# For redirect and header rules on Netlify, please use the 'netlify.toml' file.
+
+# Example of a redirect rule:
+# Redirect 301 /old-page.html /new-page.html
+
+# The following rule forces the site to use HTTPS.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

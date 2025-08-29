@@ -1,0 +1,58 @@
+/* ===== Purchase Notification ===== */
+.purchase-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(150%); /* Start hidden below screen */
+  background-color: #2d3748; /* A dark slate gray */
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.purchase-notification.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0); /* Slide into view */
+}
+
+.purchase-notification img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4a5568; /* A lighter slate gray */
+}
+
+.purchase-notification .content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.purchase-notification .content p strong {
+  font-weight: 600;
+  color: #a0aec0; /* A light gray for emphasis */
+}
+
+.purchase-notification .close-btn {
+  background: none;
+  border: none;
+  color: #cbd5e0; /* A lighter gray for the close icon */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.purchase-notification .close-btn:hover {
+  color: white;
+}
