@@ -1,0 +1,16 @@
+# Netlify configuration file
+
+# The following build command is not necessary for a static site,
+# but it's good practice to have it.
+[build]
+  # This command can be empty if you don't have a build step.
+  command = ""
+  # The directory to publish, which is the root for this project.
+  publish = "/"
+
+# Redirects and headers can be defined here.
+# For example, a redirect from a path to the homepage:
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
