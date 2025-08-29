@@ -2,8 +2,8 @@
 .purchase-notification {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(150%); /* Start hidden below screen */
+  left: 20px;
+  transform: translateY(150%); /* Start hidden below screen */
   background-color: #2d3748; /* A dark slate gray */
   color: white;
   padding: 16px 24px;
@@ -21,7 +21,7 @@
 .purchase-notification.show {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0); /* Slide into view */
+  transform: translateY(0); /* Slide into view */
 }
 
 .purchase-notification img {
