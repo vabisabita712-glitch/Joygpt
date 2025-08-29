@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthPlus - Your Wellness Partner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Animation CSS -->
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- ===== Header/Navbar ===== -->
+  <header class="bg-white text-gray-800 shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- Left: Logo + Brand -->
+      <a href="/" class="flex items-center gap-2" aria-label="HealthPlus Homepage" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1506126613408-4e63a3b6a48d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&q=80" alt="HealthPlus Logo" class="w-10 h-10 rounded-full" loading="lazy" decoding="async" />
+        <span class="text-xl font-bold">HealthPlus</span>
+      </a>
+
+      <!-- Center: Nav Menu (Desktop) -->
+      <nav class="hidden md:flex space-x-8 text-base font-medium">
+        <a href="#home" class="hover:text-green-500" aria-label="Go to Home">Home</a>
+        <a href="#about" class="hover:text-green-500" aria-label="Go to About">About</a>
+        <a href="#product" class="hover:text-green-500" aria-label="Go to Product">Product</a>
+        <a href="#faq" class="hover:text-green-500" aria-label="Go to FAQ">FAQ</a>
+        <a href="#contact" class="hover:text-green-500" aria-label="Go to Contact">Contact</a>
+      </nav>
+
+      <!-- Right: CTA Button (Desktop) -->
+      <div class="hidden md:block">
+        <a href="#get-started"
+           class="bg-green-500 text-white font-bold px-5 py-2 rounded-lg shadow hover:scale-105 transition"
+           aria-label="Buy Now" rel="noopener">
+          Order Now
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 pb-4 bg-white text-gray-800">
+        <a href="#home" class="hover:text-green-500" aria-label="Go to Home">Home</a>
+        <a href="#about" class="hover:text-green-500" aria-label="Go to About">About</a>
+        <a href="#product" class="hover:text-green-500" aria-label="Go to Product">Product</a>
+        <a href="#faq" class="hover:text-green-500" aria-label="Go to FAQ">FAQ</a>
+        <a href="#contact" class="hover:text-green-500" aria-label="Go to Contact">Contact</a>
+
+      <!-- CTA Button (Mobile) -->
+      <a href="#get-started"
+         class="bg-green-500 text-white font-bold px-6 py-2 rounded-lg shadow hover:scale-105 transition"
+         aria-label="Buy Now" rel="noopener">
+        Order Now
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Script: Toggle Mobile Menu ===== -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      menuBtn.textContent = menuBtn.textContent === "☰" ? "✖️" : "☰";
+    });
+  </script>
+  <!-- Dummy Content for Scroll -->
+<!-- ===== Hero Section ===== -->
+<section class="bg-[#F8FAFC] pt-28 pb-16 px-6" id="home">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Full Width H1 -->
+    <h1 class="text-3xl md:text-5xl font-bold text-gray-900 text-center md:text-left mb-10 w-full">
+      A New Path to a Healthier You
+    </h1>
+
+    <!-- Two Column Layout -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+
+      <!-- Left Content -->
+      <div class="flex-1 text-center md:text-left">
+        <!-- Subheading -->
+      <h2 class="text-3xl font-bold text-green-600 mb-7">
+        The Trusted Choice for Your Well-being
+      </h2>
+
+      <p class="text-xl font-medium text-gray-700 mb-5">
+        Take the right step now to maintain energy and vitality in your daily life.
+      </p>
+      <p class="text-xl font-medium text-gray-700 mb-5">
+        This product is designed to give you confidence and results you can feel.
+      </p>
+
+        <!-- Anchor Text -->
+        <a href="#get-started"
+           class="font-bold underline text-green-600 hover:text-green-700"
+           aria-label="Today's Special Offer" rel="noopener">
+          View Today's Special Offer
+        </a>
+
+        <!-- CTA Button -->
+        <div class="mt-8">
+          <a href="#get-started"
+             class="bg-green-500 text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:scale-105 transition inline-block"
+             aria-label="Buy Now" rel="noopener">
+            Order Now & Save
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Content: Image + Rating -->
+      <div class="flex-1 flex flex-col items-center md:items-center">
+        <!-- Product Image -->
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+             alt="Health Product"
+             class="w-64 md:w-80 lg:w-96 object-contain rounded-lg shadow-xl"
+             loading="lazy" decoding="async" />
+
+        <!-- Rating -->
+        <div class="flex items-center mt-4 space-x-2">
+          <!-- 5 Gold Stars -->
+          <div class="flex space-x-1 text-yellow-500 text-lg">
+            ★ ★ ★ ★ ★
+          </div>
+          <!-- Review Count -->
+          <span class="text-sm text-gray-600">5.0/1220 reviews</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   <!-- ===== Why Choose Our Product Section ===== -->
+<section class="bg-gray-50 py-16 px-6" id="about">
+  <div class="max-w-7xl mx-auto text-center">
+    <!-- Section Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      Why Choose Our Product?
+    </h2>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+             alt="FDA Approved"
+             class="mx-auto mb-4 w-24 h-24 object-contain"
+             loading="lazy" decoding="async">
+        <h3 class="text-lg font-bold text-gray-900 mb-2">FDA Approved</h3>
+        <p class="text-gray-600 text-sm">
+          Our product is fully FDA approved, making it safe and reliable.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1590075839298-465d5a5a879a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+             alt="100% Organic"
+             class="mx-auto mb-4 w-24 h-24 object-contain"
+             loading="lazy" decoding="async">
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Organic Formula</h3>
+        <p class="text-gray-600 text-sm">
+          The product is made with 100% natural ingredients, with no chemical additives.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+             alt="Premium Quality"
+             class="mx-auto mb-4 w-24 h-24 object-contain"
+             loading="lazy" decoding="async">
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Premium Quality</h3>
+        <p class="text-gray-600 text-sm">
+          Made with the latest technology, it maintains the best quality standards in the market.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1516594798947-7b56d0917925?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+             alt="Trusted Worldwide"
+             class="mx-auto mb-4 w-24 h-24 object-contain"
+             loading="lazy" decoding="async">
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Trusted Worldwide</h3>
+        <p class="text-gray-600 text-sm">
+          Over 1,000 customers are already satisfied with our product.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+   <section class="py-16 bg-gray-50">
+  <!-- Section Heading -->
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+    Our Customer Reviews
+  </h2>
+
+  <!-- Review Cards Grid -->
+  <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto px-6">
+
+    <!-- Single Review Card -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+      <!-- Profile Image -->
+      <img class="w-20 h-20 mx-auto rounded-full border-4 border-gray-200 object-cover"
+           src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Customer" />
+
+      <!-- Verified Label -->
+      <div class="mt-4 flex items-center justify-center gap-2">
+        <span class="font-semibold text-green-600">Verified Purchase</span>
+        <span class="text-green-600 bg-green-100 px-2 py-0.5 rounded-full text-xs">✔</span>
+      </div>
+
+      <!-- Stars -->
+      <div class="flex justify-center mt-3 text-yellow-400">
+        ★★★★★
+      </div>
+
+      <!-- Review Text -->
+      <p class="mt-4 text-gray-600">
+        This product is truly amazing! My experience has been great since I started using it.
+      </p>
+
+      <!-- Name & Location -->
+      <h4 class="mt-4 font-bold text-gray-800">Jessica M, California</h4>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+      <img class="w-20 h-20 mx-auto rounded-full border-4 border-gray-200 object-cover"
+           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Customer" />
+      <div class="mt-4 flex items-center justify-center gap-2">
+        <span class="font-semibold text-green-600">Verified Purchase</span>
+        <span class="text-green-600 bg-green-100 px-2 py-0.5 rounded-full text-xs">✔</span>
+      </div>
+      <div class="flex justify-center mt-3 text-yellow-400">
+        ★★★★★
+      </div>
+      <p class="mt-4 text-gray-600">
+        Great value for the price. I am 100% satisfied.
+      </p>
+      <h4 class="mt-4 font-bold text-gray-800">Mike R, Toronto</h4>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+      <img class="w-20 h-20 mx-auto rounded-full border-4 border-gray-200 object-cover"
+           src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Customer" />
+      <div class="mt-4 flex items-center justify-center gap-2">
+        <span class="font-semibold text-green-600">Verified Purchase</span>
+        <span class="text-green-600 bg-green-100 px-2 py-0.5 rounded-full text-xs">✔</span>
+      </div>
+      <div class="flex justify-center mt-3 text-yellow-400">
+        ★★★★★
+      </div>
+      <p class="mt-4 text-gray-600">
+        My whole family uses it. In one word, it's an excellent product!
+      </p>
+      <h4 class="mt-4 font-bold text-gray-800">Emily S, Sydney</h4>
+    </div>
+
+  </div>
+</section>
+   <section class="py-16 bg-white" id="product">
+  <!-- Section Heading -->
+  <h2 class="text-3xl font-bold text-center mb-12">What is the Product?</h2>
+
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <!-- Left Side: Product Image -->
+    <div class="md:w-2/5 w-full flex justify-center">
+      <img src="https://images.unsplash.com/photo-1560942485-b2a1a20d7494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Product Image" class="max-w-full h-auto object-contain rounded-lg">
+    </div>
+
+    <!-- Right Side: Product Description -->
+    <div class="md:w-3/5 w-full space-y-4">
+      <p class="text-lg text-gray-700">
+        This product will serve as an important companion in your daily life.
+        Its design, quality, and ease of use make it suitable for everyone.
+      </p>
+      <p class="text-lg text-gray-700">
+        One of the key features of the product is its effectiveness.
+        It delivers fast results and remains effective for you in the long run.
+        You can save both time and effort by using it.
+      </p>
+      <p class="text-lg text-gray-700">
+        Due to its quality and performance, it is now the first choice for many.
+        It provides you not just with a product, but with a reliable experience.
+      </p>
+
+      <!-- CTA Button -->
+      <div class="mt-6">
+        <a href="#get-started" class="bg-green-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="py-16 bg-gray-50">
+  <!-- Section Heading -->
+  <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+    How Does the Product Work?
+  </h2>
+
+  <!-- Steps Container -->
+  <div class="max-w-4xl mx-auto flex flex-col gap-6">
+
+    <!-- Step 1 -->
+    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <!-- Icon -->
+      <img src="https://images.unsplash.com/photo-1542736143-a9a9f52233f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&q=80" alt="Step 1" class="w-12 h-12 object-contain">
+      <!-- Content -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700">Step 1: Initial Action</h3>
+        <p class="text-gray-600 mt-2">
+          This is the first step where the product starts its process. It ensures smooth initiation and prepares the system for the next phases.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <img src="https://images.unsplash.com/photo-1542736143-a9a9f52233f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&q=80" alt="Step 2" class="w-12 h-12 object-contain">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700">Step 2: Core Function</h3>
+        <p class="text-gray-600 mt-2">
+          At this stage, the product actively begins its core function, delivering results that enhance performance and effectiveness.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <img src="https://images.unsplash.com/photo-1542736143-a9a9f52233f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&q=80" alt="Step 3" class="w-12 h-12 object-contain">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700">Step 3: Optimization</h3>
+        <p class="text-gray-600 mt-2">
+          The product works internally to optimize the entire process, making sure the benefits are maximized for the user.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <img src="https://images.unsplash.com/photo-1542736143-a9a9f52233f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&q=80" alt="Step 4" class="w-12 h-12 object-contain">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700">Step 4: Continued Support</h3>
+        <p class="text-gray-600 mt-2">
+          During this phase, the product ensures sustained performance by supporting the system for long-term results.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <img src="https://images.unsplash.com/photo-1542736143-a9a9f52233f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&q=80" alt="Step 5" class="w-12 h-12 object-contain">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700">Step 5: Final Outcome</h3>
+        <p class="text-gray-600 mt-2">
+          Finally, the product completes its process and delivers the promised outcome, ensuring satisfaction and reliability.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="py-16 bg-gray-50">
+  <!-- Heading Block (Rectangle Gradient) -->
+  <div class="relative flex flex-col items-center justify-center mb-12">
+    <div class="w-full max-w-3xl bg-gradient-to-r from-green-200 to-blue-200 rounded-xl shadow-lg flex flex-col items-center justify-center text-center p-8">
+      <h2 class="text-[40px] font-bold text-[#333333]">Collect Your Special Gift</h2>
+      <p class="text-[20px] font-medium text-[#444444] mt-2">Choose your favorite from the offers below</p>
+    </div>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Card 1 -->
+    <div class="relative w-[300px] rounded-xl border border-[#E0E0E0] shadow-md bg-white overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+      <img src="https://images.unsplash.com/photo-1550951233-398b6b2a734f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gift 1" class="w-full h-[250px] object-cover">
+      <div class="p-5 text-center">
+        <h3 class="text-xl font-semibold text-gray-800">Gift Package 1</h3>
+        <p class="text-gray-600 text-sm mt-2">Get your favorite gift at a special discount.</p>
+        <p class="text-lg font-bold text-green-600 mt-3">$12.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-green-600 transition">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Card 2 (Taller Middle Card) -->
+    <div class="relative w-[300px] rounded-xl border border-[#E0E0E0] shadow-md bg-white overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+      <img src="https://images.unsplash.com/photo-1513360348227-913a93a81b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gift 2" class="w-full h-[250px] object-cover">
+      <div class="p-5 text-center">
+        <h3 class="text-xl font-semibold text-gray-800">Gift Package 2</h3>
+        <p class="text-gray-600 text-sm mt-2">The best offer with extra bonuses.</p>
+        <p class="text-lg font-bold text-green-600 mt-3">$18.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-green-600 transition">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative w-[300px] rounded-xl border border-[#E0E0E0] shadow-md bg-white overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+      <img src="https://images.unsplash.com/photo-1606823723154-162d3a36a468?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gift 3" class="w-full h-[250px] object-cover">
+      <div class="p-5 text-center">
+        <h3 class="text-xl font-semibold text-gray-800">Gift Package 3</h3>
+        <p class="text-gray-600 text-sm mt-2">Surprise your loved ones.</p>
+        <p class="text-lg font-bold text-green-600 mt-3">$15.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-green-600 transition">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Center Image -->
+  <div class="flex justify-center mt-12">
+    <img src="https://images.unsplash.com/photo-1550951233-398b6b2a734f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Bottom Icon" class="w-[200px] h-[200px] object-cover rounded-full shadow-xl border-4 border-white">
+  </div>
+</section>
+<section class="bg-[#F8F9FA] py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Heading -->
+    <h2 class="text-center text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-md">
+      🎉 Exclusive Bonus Offer!
+    </h2>
+
+    <!-- Cards Container -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="flex flex-col md:flex-row items-center bg-white rounded-[15px] shadow-lg hover:scale-[1.02] transition-transform duration-300 h-[250px] p-4">
+        <!-- Left Image -->
+        <img src="https://images.unsplash.com/photo-1593035021884-275d1911a05c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Bonus 1"
+             class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-[10px] object-cover mb-4 md:mb-0 md:mr-4">
+
+        <!-- Right Text -->
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#2D3436] mb-2">✨ Premium Support</h3>
+          <h4 class="text-lg text-green-500 mb-3">Bonus Value: $50</h4>
+          <p class="text-[#636E72] text-base leading-relaxed">
+            With this bonus, you get a 24/7 support team that will instantly resolve any of your issues.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col md:flex-row items-center bg-white rounded-[15px] shadow-lg hover:scale-[1.02] transition-transform duration-300 h-[250px] p-4">
+        <!-- Left Image -->
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Bonus 2"
+             class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-[10px] object-cover mb-4 md:mb-0 md:mr-4">
+
+        <!-- Right Text -->
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#2D3436] mb-2">📘 Exclusive E-book</h3>
+          <h4 class="text-lg text-green-500 mb-3">Bonus Value: $30</h4>
+          <p class="text-[#636E72] text-base leading-relaxed">
+            A special e-book to take your business further, with secret strategies shared inside.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="max-w-6xl mx-auto py-16 px-6 bg-gray-50">
+  <!-- Heading -->
+  <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+    Ingredients
+  </h2>
+
+  <!-- Grid Layout -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Green Tea Extract</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Rich in antioxidants that support metabolism and help in natural fat burning.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• L-Theanine</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Promotes relaxation and focus while reducing stress without drowsiness.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Chromium</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Helps regulate blood sugar levels and reduces unhealthy food cravings.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Vitamin B6</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Supports energy production and boosts the body’s natural metabolism.
+      </p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Vitamin B12</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Improves energy levels, mental focus, and reduces fatigue naturally.
+      </p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Chlorogenic Acid</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Found in coffee beans, it helps reduce carbohydrate absorption in the body.
+      </p>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition p-6 animate-fadeInUp">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">• Cayenne Pepper</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Contains capsaicin which boosts metabolism and aids in fat loss effectively.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="w-full bg-white border border-[#DCDCDC]">
+  <div class="flex flex-col md:flex-row items-center md:items-center p-6">
+
+    <!-- Left: Icon/Image -->
+    <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+      <img
+        src="https://images.unsplash.com/photo-1596797882476-ce9785b3bf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&q=80"
+        alt="Free Delivery"
+        class="w-20 h-20 object-contain"
+      />
+    </div>
+
+    <!-- Right: Text -->
+    <div class="text-center md:text-left">
+      <h2 class="text-[1.5rem] md:text-[1.5rem] font-semibold text-[#2D3436]">
+        🚚 Free Home Delivery Service!
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="w-full bg-[#F8F9FA] border border-[#DCDCDC] py-10 px-6">
+  <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center md:items-start md:space-x-6">
+
+    <!-- Left: Guarantee Badge/Icon -->
+    <div class="flex-shrink-0 mb-6 md:mb-0">
+      <img
+        src="https://images.unsplash.com/photo-1614064548237-02f9d3ed56e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+        alt="Money Back Guarantee"
+        class="w-24 h-24 object-contain"
+      />
+    </div>
+
+    <!-- Right: Text Content -->
+    <div class="text-center md:text-left">
+      <h2 class="text-[1.5rem] font-semibold text-[#2D3436] mb-3">
+        ✅ 30-Day Money Back Guarantee
+      </h2>
+      <p class="text-base text-[#4a4a4a] leading-relaxed">
+        We believe you will love our product.
+        However, if for any reason you are not satisfied,
+        you will receive a <span class="font-medium text-[#2D3436]">100% refund within 30 days</span> —
+        no questions asked.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="max-w-3xl mx-auto my-12 p-8 bg-white border border-gray-300 rounded-2xl shadow-sm text-center" id="get-started">
+
+  <!-- Heading -->
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+    Start Your New Health Journey Today!
+  </h2>
+
+  <!-- Product Image -->
+  <div class="flex justify-center mb-6">
+    <img
+      src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+      alt="Product Image"
+      class="w-72 h-72 object-contain"
+    />
+  </div>
+
+  <!-- Sub-heading -->
+  <h3 class="text-xl font-medium text-gray-800 mb-2">
+    Scientifically Proven Results
+  </h3>
+
+  <!-- Sub-sub-heading -->
+  <p class="text-sm text-gray-600 mb-6">
+    This formula has changed the lives of thousands of people.
+  </p>
+
+  <!-- CTA Button -->
+  <a
+    href="#"
+    class="inline-block px-8 py-4 text-lg font-semibold text-white rounded-xl shadow-md
+           bg-gradient-to-r from-green-500 to-emerald-600
+           transform transition duration-300
+           hover:scale-105 hover:from-emerald-600 hover:to-green-500"
+  >
+    Order Now
+  </a>
+
+</section>
+<!-- FAQ Section -->
+<section class="bg-gray-50 py-16" id="faq">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-green-600 mb-12">
+      Frequently Asked Questions (FAQ)
+    </h2>
+
+    <div class="space-y-4">
+
+      <!-- FAQ Item 1 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          Is this product authentic?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Yes, we provide 100% authentic products directly from the official distributor.</p>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          How long does delivery take?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Usually, the product arrives within 3-7 business days of ordering.</p>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          Can I return or exchange the product?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Yes, if the product is defective or damaged, it can be returned or exchanged within 7 days.</p>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          Is the product safe?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Yes, all our health products are verified against international standards and are safe.</p>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          Will I get customer support?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Of course, our 24/7 customer support team will always be there for you.</p>
+      </details>
+
+      <!-- FAQ Item 6 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          How do I place an order?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">You can easily order by clicking the "Order Now" button on our website.</p>
+      </details>
+
+      <!-- FAQ Item 7 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          What payment options are available?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">We accept Visa, Mastercard, American Express, and PayPal.</p>
+      </details>
+
+      <!-- FAQ Item 8 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          How long should I use the product?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">The usage instructions for each product are different. Please follow the guidelines provided with the delivery.</p>
+      </details>
+
+      <!-- FAQ Item 9 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          Are there any side effects?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">All our products are made with natural ingredients. There are generally no side effects, but if you have special health issues, please consult a doctor.</p>
+      </details>
+
+      <!-- FAQ Item 10 -->
+      <details class="group border border-gray-200 rounded-lg p-5 bg-white">
+        <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+          How much is the shipping charge?
+          <span class="transition-transform group-open:rotate-180">⌄</span>
+        </summary>
+        <p class="mt-3 text-gray-600">Shipping charges vary by location and will be detailed at the time of order.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <!-- Heading -->
+  <h2 class="text-center font-bold text-[#2D3748] text-[2.2rem] md:text-[1.8rem] mb-10">
+    📊 Scientific References and Methodology
+  </h2>
+
+  <!-- Visual Representation -->
+  <div class="w-full">
+    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Research Diagram" class="w-full h-[400px] object-cover rounded-lg shadow-lg">
+    <p class="text-center text-sm text-gray-600 mt-2">
+      Figure 1: Schematic diagram of the research methodology
+    </p>
+  </div>
+
+  <!-- Reference List -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-lg mt-12 p-8">
+    <!-- Column 1 -->
+    <ol class="list-decimal list-inside space-y-5">
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author A, Author B. Title of research paper. Journal Name. 2020.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author C, Author D. Experimental methodology and findings. Journal of Science. 2019.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author E. Comparative analysis of results. Research Reports. 2021.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author F. Data visualization in research. Methods Journal. 2022.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author G, Author H. Critical review of methodology. Academic Press. 2018.
+        </p>
+      </li>
+    </ol>
+
+    <!-- Column 2 -->
+    <ol start="6" class="list-decimal list-inside space-y-5">
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author I. Theoretical framework for scientific analysis. 2021.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author J, Author K. Statistical data approach. Research Notes. 2017.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author L. Simulation techniques in modern studies. Tech Journal. 2020.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author M, Author N. Research ethics in practice. Science Ethics. 2019.
+        </p>
+      </li>
+      <li>
+        <p class="text-[#718096] text-base leading-7">
+          Author O. Case studies in applied research. Academic Journal. 2022.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+  </main>
+</body>
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-300 py-12" id="contact">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Brand / Logo -->
+    <div>
+      <h2 class="text-2xl font-bold text-white mb-4">HealthPlus</h2>
+      <p class="text-sm leading-relaxed">
+        Your trusted partner for a healthy lifestyle.
+        We provide health products with trusted quality and care.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-white transition">Home</a></li>
+        <li><a href="#" class="hover:text-white transition">Product</a></li>
+        <li><a href="#" class="hover:text-white transition">Offers</a></li>
+        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Support</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-white transition">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Subscribe</h3>
+      <p class="text-sm mb-4">Enter your email for new offers and updates</p>
+      <form class="flex">
+        <input type="email" placeholder="Enter your email"
+          class="w-full px-3 py-2 rounded-l-md focus:outline-none text-gray-800" />
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md text-white font-medium transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    © 2025 HealthPlus. All rights reserved.
+  </div>
+</footer>
+</html>
